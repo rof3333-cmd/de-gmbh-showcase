@@ -41,7 +41,7 @@ const Contact = () => {
               Kontakt
             </h1>
             <p className="text-background/60 max-w-2xl mx-auto text-base sm:text-lg">
-              Haben Sie ein Projekt im Sinn? Kontaktieren Sie uns für eine kostenlose Beratung und ein Angebot.
+              Ihr Partner für den Hoch-, Tief- und Umbau!
             </p>
           </motion.div>
         </div>
