@@ -19,14 +19,14 @@ import infrastructure2 from "@/assets/infrastructure-2.png";
 type Category = "all" | "tunnel" | "residential" | "infrastructure";
 
 const projects = [
-  { image: tunnel1, title: "The Future of Urban Air Mobility", category: "tunnel" as const, desc: "Modernste Tunnelbauarbeiten für die Verkehrsinfrastruktur der Zukunft." },
+  { image: tunnel1, title: "Tunnelbauprojekt für urbane Mobilität", category: "tunnel" as const, desc: "Modernste Tunnelbauarbeiten für die Verkehrsinfrastruktur der Zukunft." },
   { image: building4, title: "Schlüsselfertiges Bauen in Hessen", category: "residential" as const, desc: "Moderne Wohnanlage mit 6 Familieneinheiten in Hessen." },
   { image: infrastructure2, title: "Bauarbeiten im Freien", category: "infrastructure" as const, desc: "Großflächige Bewehrungsarbeiten für eine Autobahnbrücke." },
   { image: tunnel2, title: "Das Innere eines Tunnels im Bau", category: "tunnel" as const, desc: "Unterirdischer Tunnelabschnitt mit Bewehrungsgittersystem." },
   { image: building5, title: "Errichtung eines modernen Mehrfamilienhauses mit 8 Wohneinheiten", category: "residential" as const, desc: "Modernes 3-stöckiges Mehrfamilienhaus mit Parkplatz." },
   { image: infrastructure1, title: "Detail der Bewehrung auf der Baustelle, mit Fokus auf Metallgitter und Tragstrukturen", category: "infrastructure" as const, desc: "Schwere Bewehrungs- und Schalungsarbeiten für unterirdische Tragwände." },
   { image: building1, title: "Schlüsselfertiges Bauen im Herzen von Karlsruhe", category: "residential" as const, desc: "Rohbau für ein Mehrfamilienhaus in Karlsruhe." },
-  { image: tunnel3, title: "The Impact of Aviation on the Economy", category: "tunnel" as const, desc: "Innengerüstarbeiten und Betonarbeiten im Tunnelabschnitt." },
+  { image: tunnel3, title: "Tunnelausbau und Betonarbeiten", category: "tunnel" as const, desc: "Innengerüstarbeiten und Betonarbeiten im Tunnelabschnitt." },
   { image: building2, title: "Einfamilienhaus in Bad Zwesten", category: "residential" as const, desc: "Einfamilienhaus in traditioneller Mauerwerksbauweise." },
   { image: building3, title: "Einfamilienhaus in Bad Zwesten — Außenansicht", category: "residential" as const, desc: "Villa mit Stützmauern und Geländevorbereitung." },
 ];
