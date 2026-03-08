@@ -68,7 +68,7 @@ const Index = () => {
                   Projekte ansehen <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 rounded-sm text-sm sm:text-base px-6 sm:px-8 h-12 sm:h-14 w-full sm:w-auto">
+              <Button asChild size="lg" variant="outline" className="border-white/30 text-white bg-white/10 hover:bg-white/20 rounded-sm text-sm sm:text-base px-6 sm:px-8 h-12 sm:h-14 w-full sm:w-auto">
                 <Link to="/kontakt">Kontakt aufnehmen</Link>
               </Button>
             </div>
