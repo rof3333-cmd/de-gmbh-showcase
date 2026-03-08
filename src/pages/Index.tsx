@@ -180,7 +180,7 @@ const Index = () => {
                 <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold" style={{ fontFamily: 'Space Grotesk' }}>Ausgewählte Projekte</h2>
               </div>
               <Button asChild variant="outline" className="mt-4 md:mt-0 rounded-sm border-foreground w-full sm:w-fit">
-                <Link to="/projects">Alle Projekte ansehen <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                <Link to="/projekte">Alle Projekte ansehen <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
             </div>
           </FadeInSection>
