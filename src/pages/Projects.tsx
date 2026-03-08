@@ -19,7 +19,7 @@ import infrastructure2 from "@/assets/infrastructure-2.png";
 type Category = "all" | "tunnel" | "residential" | "infrastructure";
 
 const projects = [
-  { image: tunnel1, title: "The Future of Urban Air Mobility", category: "tunnel" as const, desc: "Modernste Tunnelbauarbeiten für die Verkehrsinfrastruktur der Zukunft." },
+  { image: tunnel1, title: "Tunnelbauprojekt für urbane Mobilität", category: "tunnel" as const, desc: "Modernste Tunnelbauarbeiten für die Verkehrsinfrastruktur der Zukunft." },
   { image: building4, title: "Schlüsselfertiges Bauen in Hessen", category: "residential" as const, desc: "Moderne Wohnanlage mit 6 Familieneinheiten in Hessen." },
   { image: infrastructure2, title: "Bauarbeiten im Freien", category: "infrastructure" as const, desc: "Großflächige Bewehrungsarbeiten für eine Autobahnbrücke." },
   { image: tunnel2, title: "Das Innere eines Tunnels im Bau", category: "tunnel" as const, desc: "Unterirdischer Tunnelabschnitt mit Bewehrungsgittersystem." },
