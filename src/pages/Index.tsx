@@ -187,7 +187,7 @@ const Index = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {featuredProjects.map((project, i) => (
               <FadeInSection key={project.title} delay={i * 0.1}>
-                <Link to="/projects" className="group block relative overflow-hidden rounded-sm aspect-[4/3]">
+                <Link to="/projekte" className="group block relative overflow-hidden rounded-sm aspect-[4/3]">
                   <img
                     src={project.image}
                     alt={project.title}
