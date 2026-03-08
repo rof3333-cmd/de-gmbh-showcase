@@ -64,12 +64,12 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-sm text-sm sm:text-base px-6 sm:px-8 h-12 sm:h-14 w-full sm:w-auto">
-                <Link to="/projects">
+                <Link to="/projekte">
                   Projekte ansehen <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 rounded-sm text-sm sm:text-base px-6 sm:px-8 h-12 sm:h-14 w-full sm:w-auto">
-                <Link to="/contact">Kontakt aufnehmen</Link>
+                <Link to="/kontakt">Kontakt aufnehmen</Link>
               </Button>
             </div>
           </motion.div>
@@ -163,7 +163,7 @@ const Index = () => {
                 Unser Team aus erfahrenen Ingenieuren, Architekten und Baufachleuten bringt Expertise und Innovation in jedes Projekt ein und gewährleistet höchste Qualitäts- und Sicherheitsstandards.
               </p>
               <Button asChild variant="outline" className="rounded-sm border-foreground text-foreground hover:bg-foreground hover:text-background w-full sm:w-auto">
-                <Link to="/about">Mehr über uns <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                <Link to="/ueber-uns">Mehr über uns <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
             </FadeInSection>
           </div>
@@ -180,14 +180,14 @@ const Index = () => {
                 <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold" style={{ fontFamily: 'Space Grotesk' }}>Ausgewählte Projekte</h2>
               </div>
               <Button asChild variant="outline" className="mt-4 md:mt-0 rounded-sm border-foreground w-full sm:w-fit">
-                <Link to="/projects">Alle Projekte ansehen <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                <Link to="/projekte">Alle Projekte ansehen <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
             </div>
           </FadeInSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {featuredProjects.map((project, i) => (
               <FadeInSection key={project.title} delay={i * 0.1}>
-                <Link to="/projects" className="group block relative overflow-hidden rounded-sm aspect-[4/3]">
+                <Link to="/projekte" className="group block relative overflow-hidden rounded-sm aspect-[4/3]">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -221,7 +221,7 @@ const Index = () => {
               Lassen Sie uns Ihre Bauvorhaben besprechen. Unser Team steht bereit, Ihre Vision mit Präzision und Exzellenz umzusetzen.
             </p>
             <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-sm text-sm sm:text-base px-8 sm:px-10 h-12 sm:h-14 w-full sm:w-auto">
-              <Link to="/contact">
+              <Link to="/kontakt">
                 Kontaktieren Sie uns <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Link>
             </Button>

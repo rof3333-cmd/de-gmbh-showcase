@@ -9,12 +9,10 @@ interface LayoutProps {
 }
 
 const navLinks = [
-  { to: "/", label: "Home" },
-  { to: "/about", label: "About Us" },
-  { to: "/services", label: "Services" },
-  { to: "/projects", label: "Projects" },
-  { to: "/careers", label: "Careers" },
-  { to: "/contact", label: "Contact" },
+  { to: "/", label: "Startseite" },
+  { to: "/ueber-uns", label: "Über uns" },
+  { to: "/projekte", label: "Projekte" },
+  { to: "/kontakt", label: "Kontakt" },
 ];
 
 const Layout = ({ children }: LayoutProps) => {
@@ -29,7 +27,6 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      {/* Header */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
@@ -47,7 +44,6 @@ const Layout = ({ children }: LayoutProps) => {
             </span>
           </NavLink>
 
-          {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
               <NavLink
@@ -62,11 +58,10 @@ const Layout = ({ children }: LayoutProps) => {
               </NavLink>
             ))}
             <Button asChild size="sm" className="ml-4 bg-accent text-accent-foreground hover:bg-accent/90 rounded-sm">
-              <NavLink to="/contact">Get a Quote</NavLink>
+              <NavLink to="/kontakt">Angebot anfordern</NavLink>
             </Button>
           </nav>
 
-          {/* Mobile Toggle */}
           <Button
             variant="ghost"
             size="icon"
@@ -77,7 +72,6 @@ const Layout = ({ children }: LayoutProps) => {
           </Button>
         </div>
 
-        {/* Mobile Nav */}
         <AnimatePresence>
           {mobileOpen && (
             <motion.nav
@@ -100,7 +94,7 @@ const Layout = ({ children }: LayoutProps) => {
                 ))}
                 <div className="pt-2 px-4">
                   <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90 rounded-sm h-12">
-                    <NavLink to="/contact" onClick={() => setMobileOpen(false)}>Get a Quote</NavLink>
+                    <NavLink to="/kontakt" onClick={() => setMobileOpen(false)}>Angebot anfordern</NavLink>
                   </Button>
                 </div>
               </div>
@@ -109,10 +103,8 @@ const Layout = ({ children }: LayoutProps) => {
         </AnimatePresence>
       </header>
 
-      {/* Main */}
       <main className="flex-1">{children}</main>
 
-      {/* Footer */}
       <footer className="bg-foreground text-background">
         <div className="container mx-auto px-5 lg:px-8 py-10 sm:py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -130,7 +122,7 @@ const Layout = ({ children }: LayoutProps) => {
               </p>
             </div>
             <div>
-              <h4 className="font-semibold mb-4" style={{ fontFamily: 'Space Grotesk' }}>Quick Links</h4>
+              <h4 className="font-semibold mb-4" style={{ fontFamily: 'Space Grotesk' }}>Navigation</h4>
               <ul className="space-y-2 text-sm text-background/60">
                 {navLinks.map((link) => (
                   <li key={link.to}>
@@ -142,22 +134,22 @@ const Layout = ({ children }: LayoutProps) => {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4" style={{ fontFamily: 'Space Grotesk' }}>Services</h4>
+              <h4 className="font-semibold mb-4" style={{ fontFamily: 'Space Grotesk' }}>Leistungen</h4>
               <ul className="space-y-2 text-sm text-background/60">
-                <li>Tunnel Construction</li>
-                <li>Residential Buildings</li>
-                <li>Infrastructure Projects</li>
-                <li>Concrete & Structural Work</li>
-                <li>Engineering Solutions</li>
+                <li>Tunnelbau</li>
+                <li>Wohnungsbau</li>
+                <li>Infrastrukturprojekte</li>
+                <li>Beton- & Tragwerksarbeiten</li>
+                <li>Beratung & Planung</li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4" style={{ fontFamily: 'Space Grotesk' }}>Contact</h4>
+              <h4 className="font-semibold mb-4" style={{ fontFamily: 'Space Grotesk' }}>Kontakt</h4>
               <ul className="space-y-2 text-sm text-background/60">
                 <li>Musterstraße 123</li>
                 <li>60000 Frankfurt am Main</li>
                 <li>Tel: +49 (0) 69 123 456 78</li>
-                <li>info@ghbh-bau.de</li>
+                <li>info@bl-bau.de</li>
               </ul>
             </div>
           </div>
