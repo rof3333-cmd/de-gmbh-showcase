@@ -119,15 +119,18 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <Card className="border-none shadow-md overflow-hidden">
-                    <div className="h-52 bg-muted flex items-center justify-center">
-                      <div className="text-center text-muted-foreground">
-                        <MapPin className="h-8 w-8 mx-auto mb-2" />
-                        <p className="text-sm font-medium">Google Maps</p>
-                        <p className="text-xs">Kartenansicht wird hier angezeigt</p>
-                      </div>
-                    </div>
-                  </Card>
+                  <div className="rounded-sm overflow-hidden shadow-md">
+                    <iframe
+                      title="Google Maps - BL-Bau GMBH"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2524.5!2d9.6627!3d51.1195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bb3d4a5f5e1a1d%3A0x0!2sVerladestra%C3%9Fe+2%2C+34286+Spangenberg!5e0!3m2!1sde!2sde!4v1700000000000"
+                      width="100%"
+                      height="250"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
+                  </div>
                 </div>
               </FadeInSection>
             </div>
