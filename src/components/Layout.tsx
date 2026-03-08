@@ -37,7 +37,7 @@ const Layout = ({ children }: LayoutProps) => {
             : "bg-transparent"
         }`}
       >
-        <div className="container mx-auto flex items-center justify-between h-20 px-4 lg:px-8">
+        <div className="container mx-auto flex items-center justify-between h-16 sm:h-20 px-4 lg:px-8">
           <NavLink to="/" className="flex items-center gap-2">
             <div className="w-10 h-10 bg-accent rounded-sm flex items-center justify-center">
               <span className="text-accent-foreground font-bold text-lg" style={{ fontFamily: 'Space Grotesk' }}>G</span>
