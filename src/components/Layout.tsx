@@ -78,15 +78,23 @@ const Layout = ({ children }: LayoutProps) => {
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              className="lg:hidden bg-foreground border-t border-white/10 overflow-hidden"
+              className={`lg:hidden overflow-hidden ${
+                scrolled
+                  ? 'bg-background border-t border-border'
+                  : 'bg-foreground border-t border-white/10'
+              }`}
             >
               <div className="px-4 py-3 space-y-1">
                 {navLinks.map((link) => (
                   <NavLink
                     key={link.to}
                     to={link.to}
-                    className="block px-4 py-3.5 rounded-md text-base font-medium text-white/80 hover:text-white hover:bg-white/10 transition-colors"
-                    activeClassName="!text-accent bg-white/10"
+                    className={`block px-4 py-3.5 rounded-md text-base font-medium transition-colors ${
+                      scrolled
+                        ? 'text-foreground hover:bg-muted'
+                        : 'text-white/80 hover:text-white hover:bg-white/10'
+                    }`}
+                    activeClassName={scrolled ? '!text-accent bg-muted' : '!text-accent bg-white/10'}
                     onClick={() => setMobileOpen(false)}
                   >
                     {link.label}
