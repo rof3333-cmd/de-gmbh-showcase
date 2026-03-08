@@ -134,10 +134,6 @@ const Index = () => {
             <FadeInSection delay={0.2}>
               <div className="relative">
                 <img src={building1} alt="Bauprojekt" className="rounded-sm shadow-2xl w-full" />
-                <div className="absolute -bottom-4 -left-2 sm:-bottom-6 sm:-left-6 bg-accent text-accent-foreground p-4 sm:p-6 rounded-sm shadow-xl">
-                  <div className="text-2xl sm:text-3xl font-bold" style={{ fontFamily: 'Space Grotesk' }}>25+</div>
-                  <div className="text-xs sm:text-sm">Jahre Exzellenz</div>
-                </div>
               </div>
             </FadeInSection>
             <FadeInSection>
