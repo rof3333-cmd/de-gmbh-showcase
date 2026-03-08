@@ -78,7 +78,7 @@ const Layout = ({ children }: LayoutProps) => {
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              className="lg:hidden bg-background/98 backdrop-blur-md border-t border-border overflow-hidden"
+              className="lg:hidden bg-background border-t border-border overflow-hidden"
             >
               <div className="px-4 py-3 space-y-1">
                 {navLinks.map((link) => (
