@@ -64,7 +64,7 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-sm text-sm sm:text-base px-6 sm:px-8 h-12 sm:h-14 w-full sm:w-auto">
-                <Link to="/projects">
+                <Link to="/projekte">
                   Projekte ansehen <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                 </Link>
               </Button>
