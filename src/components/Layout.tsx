@@ -40,10 +40,10 @@ const Layout = ({ children }: LayoutProps) => {
         <div className="container mx-auto flex items-center justify-between h-16 sm:h-20 px-4 lg:px-8">
           <NavLink to="/" className="flex items-center gap-2">
             <div className="w-10 h-10 bg-accent rounded-sm flex items-center justify-center">
-              <span className="text-accent-foreground font-bold text-lg" style={{ fontFamily: 'Space Grotesk' }}>G</span>
+              <span className="text-accent-foreground font-bold text-lg" style={{ fontFamily: 'Space Grotesk' }}>B</span>
             </div>
             <span className={`text-xl font-bold tracking-tight transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`} style={{ fontFamily: 'Space Grotesk' }}>
-              GHBH <span className="text-accent">Bau</span>
+              BL-BAU <span className="text-accent">GMBH</span>
             </span>
           </NavLink>
 
