@@ -119,14 +119,14 @@ const Layout = ({ children }: LayoutProps) => {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-10 h-10 bg-accent rounded-sm flex items-center justify-center">
-                  <span className="text-accent-foreground font-bold text-lg" style={{ fontFamily: 'Space Grotesk' }}>G</span>
+                  <span className="text-accent-foreground font-bold text-lg" style={{ fontFamily: 'Space Grotesk' }}>B</span>
                 </div>
                 <span className="text-xl font-bold" style={{ fontFamily: 'Space Grotesk' }}>
-                  GHBH <span className="text-accent">Bau</span>
+                  BL-BAU <span className="text-accent">GMBH</span>
                 </span>
               </div>
               <p className="text-sm text-background/60 leading-relaxed">
-                Building the future with precision. Your trusted partner for tunnel construction, residential buildings, and infrastructure projects.
+                Bauen für die Zukunft mit Präzision. Ihr zuverlässiger Partner für Tunnelbau, Wohnungsbau und Infrastrukturprojekte.
               </p>
             </div>
             <div>
