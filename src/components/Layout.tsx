@@ -40,10 +40,10 @@ const Layout = ({ children }: LayoutProps) => {
         <div className="container mx-auto flex items-center justify-between h-16 sm:h-20 px-4 lg:px-8">
           <NavLink to="/" className="flex items-center gap-2">
             <div className="w-10 h-10 bg-accent rounded-sm flex items-center justify-center">
-              <span className="text-accent-foreground font-bold text-lg" style={{ fontFamily: 'Space Grotesk' }}>G</span>
+              <span className="text-accent-foreground font-bold text-lg" style={{ fontFamily: 'Space Grotesk' }}>B</span>
             </div>
             <span className={`text-xl font-bold tracking-tight transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`} style={{ fontFamily: 'Space Grotesk' }}>
-              GHBH <span className="text-accent">Bau</span>
+              BL-BAU <span className="text-accent">GMBH</span>
             </span>
           </NavLink>
 
@@ -119,14 +119,14 @@ const Layout = ({ children }: LayoutProps) => {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-10 h-10 bg-accent rounded-sm flex items-center justify-center">
-                  <span className="text-accent-foreground font-bold text-lg" style={{ fontFamily: 'Space Grotesk' }}>G</span>
+                  <span className="text-accent-foreground font-bold text-lg" style={{ fontFamily: 'Space Grotesk' }}>B</span>
                 </div>
                 <span className="text-xl font-bold" style={{ fontFamily: 'Space Grotesk' }}>
-                  GHBH <span className="text-accent">Bau</span>
+                  BL-BAU <span className="text-accent">GMBH</span>
                 </span>
               </div>
               <p className="text-sm text-background/60 leading-relaxed">
-                Building the future with precision. Your trusted partner for tunnel construction, residential buildings, and infrastructure projects.
+                Bauen für die Zukunft mit Präzision. Ihr zuverlässiger Partner für Tunnelbau, Wohnungsbau und Infrastrukturprojekte.
               </p>
             </div>
             <div>
@@ -162,8 +162,8 @@ const Layout = ({ children }: LayoutProps) => {
             </div>
           </div>
           <div className="border-t border-background/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-background/40">
-            <p>© {new Date().getFullYear()} GHBH Bau. All rights reserved.</p>
-            <p className="mt-2 md:mt-0">Built with precision and passion.</p>
+            <p>© {new Date().getFullYear()} BL-Bau GMBH. Alle Rechte vorbehalten.</p>
+            <p className="mt-2 md:mt-0">Gebaut mit Präzision und Leidenschaft.</p>
           </div>
         </div>
       </footer>
