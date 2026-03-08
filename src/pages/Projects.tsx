@@ -32,10 +32,10 @@ const projects = [
 ];
 
 const filters: { value: Category; label: string }[] = [
-  { value: "all", label: "All Projects" },
-  { value: "tunnel", label: "Tunnel Construction" },
-  { value: "residential", label: "Residential" },
-  { value: "infrastructure", label: "Infrastructure" },
+  { value: "all", label: "Alle Projekte" },
+  { value: "tunnel", label: "Tunnelbau" },
+  { value: "residential", label: "Wohnungsbau" },
+  { value: "infrastructure", label: "Infrastruktur" },
 ];
 
 const Projects = () => {
@@ -46,14 +46,14 @@ const Projects = () => {
     <Layout>
       {/* Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden bg-foreground">
-        <div className="relative container mx-auto px-4 lg:px-8 text-center py-16">
+        <div className="relative container mx-auto px-5 lg:px-8 text-center py-16">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <div className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">Portfolio</div>
-            <h1 className="text-4xl md:text-6xl font-bold text-background mb-4" style={{ fontFamily: 'Space Grotesk' }}>
-              Our Projects
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-background mb-4" style={{ fontFamily: 'Space Grotesk' }}>
+              Unsere Projekte
             </h1>
-            <p className="text-background/60 max-w-2xl mx-auto text-lg">
-              Explore our portfolio of successfully completed construction projects across Europe.
+            <p className="text-background/60 max-w-2xl mx-auto text-base sm:text-lg">
+              Entdecken Sie unser Portfolio erfolgreich abgeschlossener Bauprojekte in ganz Europa.
             </p>
           </motion.div>
         </div>
