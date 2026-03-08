@@ -163,7 +163,7 @@ const Index = () => {
                 Unser Team aus erfahrenen Ingenieuren, Architekten und Baufachleuten bringt Expertise und Innovation in jedes Projekt ein und gewährleistet höchste Qualitäts- und Sicherheitsstandards.
               </p>
               <Button asChild variant="outline" className="rounded-sm border-foreground text-foreground hover:bg-foreground hover:text-background w-full sm:w-auto">
-                <Link to="/about">Mehr über uns <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                <Link to="/ueber-uns">Mehr über uns <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
             </FadeInSection>
           </div>
