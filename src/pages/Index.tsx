@@ -190,22 +190,22 @@ const Index = () => {
       </section>
 
       {/* CTA */}
-      <section className="relative py-24 overflow-hidden">
+      <section className="relative py-16 sm:py-24 overflow-hidden">
         <div className="absolute inset-0">
           <img src={infrastructure2} alt="Construction" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/75" />
         </div>
-        <div className="relative container mx-auto px-4 lg:px-8 text-center">
+        <div className="relative container mx-auto px-5 lg:px-8 text-center">
           <FadeInSection>
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6" style={{ fontFamily: 'Space Grotesk' }}>
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-4 sm:mb-6" style={{ fontFamily: 'Space Grotesk' }}>
               Ready to Start Your Project?
             </h2>
-            <p className="text-white/70 max-w-xl mx-auto mb-10 text-lg">
+            <p className="text-white/70 max-w-xl mx-auto mb-8 sm:mb-10 text-sm sm:text-lg">
               Let's discuss your construction needs. Our team is ready to bring your vision to life with precision and excellence.
             </p>
-            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-sm text-base px-10 h-14">
+            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-sm text-sm sm:text-base px-8 sm:px-10 h-12 sm:h-14 w-full sm:w-auto">
               <Link to="/contact">
-                Contact Us Today <ArrowRight className="ml-2 h-5 w-5" />
+                Contact Us Today <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Link>
             </Button>
           </FadeInSection>
