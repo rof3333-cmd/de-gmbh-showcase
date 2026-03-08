@@ -11,9 +11,9 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
-  { icon: MapPin, title: "Adresse", text: "Musterstraße 123\n60000 Frankfurt am Main\nDeutschland" },
-  { icon: Phone, title: "Telefon", text: "+49 (0) 69 123 456 78" },
-  { icon: Mail, title: "E-Mail", text: "info@bl-bau.de" },
+  { icon: MapPin, title: "Adresse", text: "Verladestraße 2\n34286 Spangenberg" },
+  { icon: Phone, title: "Telefon", text: "+49 5663 939 0276" },
+  { icon: Mail, title: "E-Mail", text: "blbau@hotmail.de" },
   { icon: Clock, title: "Öffnungszeiten", text: "Mo — Fr: 07:00 — 17:00\nSa: 08:00 — 13:00" },
 ];
 
