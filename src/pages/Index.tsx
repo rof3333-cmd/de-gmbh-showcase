@@ -83,9 +83,9 @@ const Index = () => {
       </section>
 
       {/* Stats */}
-      <section className="bg-foreground text-background py-16">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <section className="bg-foreground text-background py-10 sm:py-16">
+        <div className="container mx-auto px-5 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
             <AnimatedCounter end={25} suffix="+" label="Years Experience" />
             <AnimatedCounter end={350} suffix="+" label="Projects Completed" />
             <AnimatedCounter end={120} suffix="+" label="Team Members" />
