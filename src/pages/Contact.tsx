@@ -92,9 +92,19 @@ const Contact = () => {
             <div className="lg:col-span-2">
               <FadeInSection delay={0.15}>
                 <div className="space-y-8">
-                  <div>
-                    <h2 className="text-xl sm:text-2xl font-bold mb-6" style={{ fontFamily: 'Space Grotesk' }}>Kontaktinformationen</h2>
-                    <div className="space-y-6">
+                   <div className="mb-8">
+                     <h2 className="text-xl sm:text-2xl font-bold mb-4" style={{ fontFamily: 'Space Grotesk' }}>Über unsere Firma</h2>
+                     <div className="text-sm text-muted-foreground space-y-3 leading-relaxed">
+                       <p>Sie träumen von den eigenen vier Wänden oder suchen einen zuverlässigen Partner für Tiefbauprojekte? Dann sind Sie bei uns genau richtig!</p>
+                       <p>Ob Neubau, Umbau, Fundamentarbeiten oder umfangreiche Tiefbauprojekte – wir bringen Ihre Visionen in die Realität.</p>
+                       <p>Mit Erfahrung, Präzision und einem starken Team stehen wir Ihnen von der Planung bis zur Umsetzung zur Seite.</p>
+                       <p>Lassen Sie uns gemeinsam Ihr Bauvorhaben verwirklichen! Kontaktieren Sie uns jetzt für eine unverbindliche Beratung – wir freuen uns auf Ihr Projekt!</p>
+                     </div>
+                   </div>
+
+                   <div>
+                     <h2 className="text-xl sm:text-2xl font-bold mb-6" style={{ fontFamily: 'Space Grotesk' }}>Kontaktinformationen</h2>
+                     <div className="space-y-6">
                       {contactInfo.map((item) => (
                         <div key={item.title} className="flex gap-4">
                           <div className="w-12 h-12 rounded-sm bg-accent/10 flex items-center justify-center shrink-0">

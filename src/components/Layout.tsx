@@ -146,10 +146,10 @@ const Layout = ({ children }: LayoutProps) => {
             <div>
               <h4 className="font-semibold mb-4" style={{ fontFamily: 'Space Grotesk' }}>Kontakt</h4>
               <ul className="space-y-2 text-sm text-background/60">
-                <li>Musterstraße 123</li>
-                <li>60000 Frankfurt am Main</li>
-                <li>Tel: +49 (0) 69 123 456 78</li>
-                <li>info@bl-bau.de</li>
+                <li>Verladestraße 2</li>
+                <li>34286 Spangenberg</li>
+                <li>Tel: +49 5663 939 0276</li>
+                <li>blbau@hotmail.de</li>
               </ul>
             </div>
           </div>
