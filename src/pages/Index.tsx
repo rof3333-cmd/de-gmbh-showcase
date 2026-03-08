@@ -87,17 +87,6 @@ const Index = () => {
         </motion.div>
       </section>
 
-      {/* Stats */}
-      <section className="bg-foreground text-background py-10 sm:py-16">
-        <div className="container mx-auto px-5 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
-            <AnimatedCounter end={25} suffix="+" label="Jahre Erfahrung" />
-            <AnimatedCounter end={350} suffix="+" label="Projekte abgeschlossen" />
-            <AnimatedCounter end={120} suffix="+" label="Teammitglieder" />
-            <AnimatedCounter end={15} label="Länder" />
-          </div>
-        </div>
-      </section>
 
       {/* Fachwissen Section - from screenshot */}
       <section className="py-14 sm:py-24 bg-background">
@@ -145,10 +134,6 @@ const Index = () => {
             <FadeInSection delay={0.2}>
               <div className="relative">
                 <img src={building1} alt="Bauprojekt" className="rounded-sm shadow-2xl w-full" />
-                <div className="absolute -bottom-4 -left-2 sm:-bottom-6 sm:-left-6 bg-accent text-accent-foreground p-4 sm:p-6 rounded-sm shadow-xl">
-                  <div className="text-2xl sm:text-3xl font-bold" style={{ fontFamily: 'Space Grotesk' }}>25+</div>
-                  <div className="text-xs sm:text-sm">Jahre Exzellenz</div>
-                </div>
               </div>
             </FadeInSection>
             <FadeInSection>
