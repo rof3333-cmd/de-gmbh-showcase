@@ -37,7 +37,7 @@ const Layout = ({ children }: LayoutProps) => {
             : "bg-transparent"
         }`}
       >
-        <div className="container mx-auto flex items-center justify-between h-20 px-4 lg:px-8">
+        <div className="container mx-auto flex items-center justify-between h-16 sm:h-20 px-4 lg:px-8">
           <NavLink to="/" className="flex items-center gap-2">
             <div className="w-10 h-10 bg-accent rounded-sm flex items-center justify-center">
               <span className="text-accent-foreground font-bold text-lg" style={{ fontFamily: 'Space Grotesk' }}>G</span>
@@ -86,18 +86,23 @@ const Layout = ({ children }: LayoutProps) => {
               exit={{ height: 0, opacity: 0 }}
               className="lg:hidden bg-background/98 backdrop-blur-md border-t border-border overflow-hidden"
             >
-              <div className="px-4 py-4 space-y-1">
+              <div className="px-4 py-3 space-y-1">
                 {navLinks.map((link) => (
                   <NavLink
                     key={link.to}
                     to={link.to}
-                    className="block px-4 py-3 rounded-md text-sm font-medium text-foreground hover:bg-muted transition-colors"
+                    className="block px-4 py-3.5 rounded-md text-base font-medium text-foreground hover:bg-muted transition-colors"
                     activeClassName="!text-accent bg-muted"
                     onClick={() => setMobileOpen(false)}
                   >
                     {link.label}
                   </NavLink>
                 ))}
+                <div className="pt-2 px-4">
+                  <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90 rounded-sm h-12">
+                    <NavLink to="/contact" onClick={() => setMobileOpen(false)}>Get a Quote</NavLink>
+                  </Button>
+                </div>
               </div>
             </motion.nav>
           )}
@@ -109,7 +114,7 @@ const Layout = ({ children }: LayoutProps) => {
 
       {/* Footer */}
       <footer className="bg-foreground text-background">
-        <div className="container mx-auto px-4 lg:px-8 py-16">
+        <div className="container mx-auto px-5 lg:px-8 py-10 sm:py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             <div>
               <div className="flex items-center gap-2 mb-4">

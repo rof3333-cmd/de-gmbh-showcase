@@ -37,10 +37,10 @@ export const AnimatedCounter = ({ end, suffix = "", label }: CounterProps) => {
       viewport={{ once: true }}
       className="text-center"
     >
-      <div className="text-4xl md:text-5xl font-bold text-accent" style={{ fontFamily: 'Space Grotesk' }}>
+      <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-accent" style={{ fontFamily: 'Space Grotesk' }}>
         {count}{suffix}
       </div>
-      <div className="text-sm text-background/60 mt-2 uppercase tracking-wider">{label}</div>
+      <div className="text-xs sm:text-sm text-background/60 mt-1 sm:mt-2 uppercase tracking-wider">{label}</div>
     </motion.div>
   );
 };
