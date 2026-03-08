@@ -86,18 +86,23 @@ const Layout = ({ children }: LayoutProps) => {
               exit={{ height: 0, opacity: 0 }}
               className="lg:hidden bg-background/98 backdrop-blur-md border-t border-border overflow-hidden"
             >
-              <div className="px-4 py-4 space-y-1">
+              <div className="px-4 py-3 space-y-1">
                 {navLinks.map((link) => (
                   <NavLink
                     key={link.to}
                     to={link.to}
-                    className="block px-4 py-3 rounded-md text-sm font-medium text-foreground hover:bg-muted transition-colors"
+                    className="block px-4 py-3.5 rounded-md text-base font-medium text-foreground hover:bg-muted transition-colors"
                     activeClassName="!text-accent bg-muted"
                     onClick={() => setMobileOpen(false)}
                   >
                     {link.label}
                   </NavLink>
                 ))}
+                <div className="pt-2 px-4">
+                  <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90 rounded-sm h-12">
+                    <NavLink to="/contact" onClick={() => setMobileOpen(false)}>Get a Quote</NavLink>
+                  </Button>
+                </div>
               </div>
             </motion.nav>
           )}
