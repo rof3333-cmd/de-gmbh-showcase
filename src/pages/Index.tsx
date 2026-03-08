@@ -32,12 +32,12 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section className="relative min-h-[100svh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={tunnel2} alt="Construction site" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/40" />
         </div>
-        <div className="relative container mx-auto px-4 lg:px-8 py-32">
+        <div className="relative container mx-auto px-5 lg:px-8 py-24 pt-28 md:py-32">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -46,24 +46,24 @@ const Index = () => {
           >
             <motion.div
               initial={{ width: 0 }}
-              animate={{ width: 80 }}
+              animate={{ width: 60 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="h-1 bg-accent mb-8"
+              className="h-1 bg-accent mb-6 md:mb-8"
             />
-            <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight mb-6" style={{ fontFamily: 'Space Grotesk' }}>
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold text-white leading-tight mb-4 md:mb-6" style={{ fontFamily: 'Space Grotesk' }}>
               Building the Future<br />
               <span className="text-gradient">with Precision</span>
             </h1>
-            <p className="text-lg md:text-xl text-white/70 mb-10 max-w-xl leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-white/70 mb-8 md:mb-10 max-w-xl leading-relaxed">
               Expert construction services in tunnel engineering, residential building, and infrastructure development. Trusted by clients across Europe.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-sm text-base px-8 h-14">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-sm text-sm sm:text-base px-6 sm:px-8 h-12 sm:h-14 w-full sm:w-auto">
                 <Link to="/projects">
-                  View Projects <ArrowRight className="ml-2 h-5 w-5" />
+                  View Projects <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 rounded-sm text-base px-8 h-14">
+              <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 rounded-sm text-sm sm:text-base px-6 sm:px-8 h-12 sm:h-14 w-full sm:w-auto">
                 <Link to="/contact">Get a Quote</Link>
               </Button>
             </div>
