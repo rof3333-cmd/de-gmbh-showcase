@@ -127,23 +127,23 @@ const Index = () => {
       </section>
 
       {/* Services */}
-      <section className="py-24 bg-muted">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="py-14 sm:py-24 bg-muted">
+        <div className="container mx-auto px-5 lg:px-8">
           <FadeInSection>
-            <div className="text-center mb-16">
+            <div className="text-center mb-10 sm:mb-16">
               <div className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">What We Do</div>
-              <h2 className="text-3xl md:text-5xl font-bold" style={{ fontFamily: 'Space Grotesk' }}>Our Services</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold" style={{ fontFamily: 'Space Grotesk' }}>Our Services</h2>
             </div>
           </FadeInSection>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {services.map((service, i) => (
               <FadeInSection key={service.title} delay={i * 0.1}>
                 <Card className="border-none shadow-md hover:shadow-xl transition-all duration-500 group h-full cursor-pointer hover:-translate-y-2 bg-card">
-                  <CardContent className="p-8">
-                    <div className="w-14 h-14 rounded-sm bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent transition-colors duration-300">
-                      <service.icon className="h-7 w-7 text-accent group-hover:text-accent-foreground transition-colors duration-300" />
+                  <CardContent className="p-6 sm:p-8">
+                    <div className="w-12 sm:w-14 h-12 sm:h-14 rounded-sm bg-accent/10 flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-accent transition-colors duration-300">
+                      <service.icon className="h-6 w-6 sm:h-7 sm:w-7 text-accent group-hover:text-accent-foreground transition-colors duration-300" />
                     </div>
-                    <h3 className="font-bold text-lg mb-3" style={{ fontFamily: 'Space Grotesk' }}>{service.title}</h3>
+                    <h3 className="font-bold text-base sm:text-lg mb-2 sm:mb-3" style={{ fontFamily: 'Space Grotesk' }}>{service.title}</h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">{service.desc}</p>
                   </CardContent>
                 </Card>
