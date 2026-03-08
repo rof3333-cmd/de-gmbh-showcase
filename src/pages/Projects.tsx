@@ -26,7 +26,7 @@ const projects = [
   { image: building5, title: "Errichtung eines modernen Mehrfamilienhauses mit 8 Wohneinheiten", category: "residential" as const, desc: "Modernes 3-stöckiges Mehrfamilienhaus mit Parkplatz." },
   { image: infrastructure1, title: "Detail der Bewehrung auf der Baustelle, mit Fokus auf Metallgitter und Tragstrukturen", category: "infrastructure" as const, desc: "Schwere Bewehrungs- und Schalungsarbeiten für unterirdische Tragwände." },
   { image: building1, title: "Schlüsselfertiges Bauen im Herzen von Karlsruhe", category: "residential" as const, desc: "Rohbau für ein Mehrfamilienhaus in Karlsruhe." },
-  { image: tunnel3, title: "The Impact of Aviation on the Economy", category: "tunnel" as const, desc: "Innengerüstarbeiten und Betonarbeiten im Tunnelabschnitt." },
+  { image: tunnel3, title: "Tunnelausbau und Betonarbeiten", category: "tunnel" as const, desc: "Innengerüstarbeiten und Betonarbeiten im Tunnelabschnitt." },
   { image: building2, title: "Einfamilienhaus in Bad Zwesten", category: "residential" as const, desc: "Einfamilienhaus in traditioneller Mauerwerksbauweise." },
   { image: building3, title: "Einfamilienhaus in Bad Zwesten — Außenansicht", category: "residential" as const, desc: "Villa mit Stützmauern und Geländevorbereitung." },
 ];
