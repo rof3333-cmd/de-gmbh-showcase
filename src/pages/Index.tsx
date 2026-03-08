@@ -221,7 +221,7 @@ const Index = () => {
               Lassen Sie uns Ihre Bauvorhaben besprechen. Unser Team steht bereit, Ihre Vision mit Präzision und Exzellenz umzusetzen.
             </p>
             <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-sm text-sm sm:text-base px-8 sm:px-10 h-12 sm:h-14 w-full sm:w-auto">
-              <Link to="/contact">
+              <Link to="/kontakt">
                 Kontaktieren Sie uns <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Link>
             </Button>
