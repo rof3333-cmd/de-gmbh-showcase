@@ -162,8 +162,8 @@ const Layout = ({ children }: LayoutProps) => {
             </div>
           </div>
           <div className="border-t border-background/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-background/40">
-            <p>© {new Date().getFullYear()} GHBH Bau. All rights reserved.</p>
-            <p className="mt-2 md:mt-0">Built with precision and passion.</p>
+            <p>© {new Date().getFullYear()} BL-Bau GMBH. Alle Rechte vorbehalten.</p>
+            <p className="mt-2 md:mt-0">Gebaut mit Präzision und Leidenschaft.</p>
           </div>
         </div>
       </footer>
