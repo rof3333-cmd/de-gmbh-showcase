@@ -87,17 +87,6 @@ const Index = () => {
         </motion.div>
       </section>
 
-      {/* Stats */}
-      <section className="bg-foreground text-background py-10 sm:py-16">
-        <div className="container mx-auto px-5 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
-            <AnimatedCounter end={25} suffix="+" label="Jahre Erfahrung" />
-            <AnimatedCounter end={350} suffix="+" label="Projekte abgeschlossen" />
-            <AnimatedCounter end={120} suffix="+" label="Teammitglieder" />
-            <AnimatedCounter end={15} label="Länder" />
-          </div>
-        </div>
-      </section>
 
       {/* Fachwissen Section - from screenshot */}
       <section className="py-14 sm:py-24 bg-background">
