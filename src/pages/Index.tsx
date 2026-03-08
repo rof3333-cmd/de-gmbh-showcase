@@ -154,20 +154,20 @@ const Index = () => {
       </section>
 
       {/* Featured Projects */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="py-14 sm:py-24 bg-background">
+        <div className="container mx-auto px-5 lg:px-8">
           <FadeInSection>
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-16">
               <div>
                 <div className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">Portfolio</div>
-                <h2 className="text-3xl md:text-5xl font-bold" style={{ fontFamily: 'Space Grotesk' }}>Featured Projects</h2>
+                <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold" style={{ fontFamily: 'Space Grotesk' }}>Featured Projects</h2>
               </div>
-              <Button asChild variant="outline" className="mt-4 md:mt-0 rounded-sm border-foreground w-fit">
+              <Button asChild variant="outline" className="mt-4 md:mt-0 rounded-sm border-foreground w-full sm:w-fit">
                 <Link to="/projects">View All Projects <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
             </div>
           </FadeInSection>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {featuredProjects.map((project, i) => (
               <FadeInSection key={project.title} delay={i * 0.1}>
                 <Link to="/projects" className="group block relative overflow-hidden rounded-sm aspect-[4/3]">
@@ -177,10 +177,10 @@ const Index = () => {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <div className="text-xs text-accent uppercase tracking-wider mb-2">{project.category}</div>
-                    <h3 className="text-xl font-bold text-white" style={{ fontFamily: 'Space Grotesk' }}>{project.title}</h3>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 sm:opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+                  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
+                    <div className="text-xs text-accent uppercase tracking-wider mb-1 sm:mb-2">{project.category}</div>
+                    <h3 className="text-base sm:text-xl font-bold text-white" style={{ fontFamily: 'Space Grotesk' }}>{project.title}</h3>
                   </div>
                 </Link>
               </FadeInSection>
