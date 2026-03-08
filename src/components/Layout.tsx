@@ -1,95 +1,135 @@
-import { ReactNode, useState } from "react";
+import { ReactNode, useState, useEffect } from "react";
 import { NavLink } from "@/components/NavLink";
-import { Menu, X, Building2, Phone, Home } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface LayoutProps {
   children: ReactNode;
 }
 
 const navLinks = [
-  { to: "/", label: "Startseite", icon: Home },
-  { to: "/projekte", label: "Projekte", icon: Building2 },
-  { to: "/kontakt", label: "Kontakt", icon: Phone },
+  { to: "/", label: "Home" },
+  { to: "/about", label: "About Us" },
+  { to: "/services", label: "Services" },
+  { to: "/projects", label: "Projects" },
+  { to: "/careers", label: "Careers" },
+  { to: "/contact", label: "Contact" },
 ];
 
 const Layout = ({ children }: LayoutProps) => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-background">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-primary text-primary-foreground shadow-lg">
-        <div className="container mx-auto flex items-center justify-between h-16 px-4">
-          <NavLink to="/" className="text-xl font-bold tracking-wider">
-            BAU <span className="text-secondary">GMBH 2</span>
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+          scrolled
+            ? "bg-background/95 backdrop-blur-md shadow-lg border-b border-border"
+            : "bg-transparent"
+        }`}
+      >
+        <div className="container mx-auto flex items-center justify-between h-20 px-4 lg:px-8">
+          <NavLink to="/" className="flex items-center gap-2">
+            <div className="w-10 h-10 bg-accent rounded-sm flex items-center justify-center">
+              <span className="text-accent-foreground font-bold text-lg" style={{ fontFamily: 'Space Grotesk' }}>G</span>
+            </div>
+            <span className={`text-xl font-bold tracking-tight transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`} style={{ fontFamily: 'Space Grotesk' }}>
+              GHBH <span className="text-accent">Bau</span>
+            </span>
           </NavLink>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex gap-1">
+          <nav className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
               <NavLink
                 key={link.to}
                 to={link.to}
-                className="px-4 py-2 rounded-md text-sm font-medium transition-colors hover:bg-primary-foreground/10"
-                activeClassName="bg-primary-foreground/15"
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
+                  scrolled ? 'text-foreground hover:text-accent' : 'text-white/80 hover:text-white'
+                }`}
+                activeClassName={scrolled ? '!text-accent' : '!text-white'}
               >
                 {link.label}
               </NavLink>
             ))}
+            <Button asChild size="sm" className="ml-4 bg-accent text-accent-foreground hover:bg-accent/90 rounded-sm">
+              <NavLink to="/contact">Get a Quote</NavLink>
+            </Button>
           </nav>
 
           {/* Mobile Toggle */}
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden text-primary-foreground hover:bg-primary-foreground/10"
+            className={`lg:hidden ${scrolled ? 'text-foreground' : 'text-white'}`}
             onClick={() => setMobileOpen(!mobileOpen)}
           >
-            {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
 
         {/* Mobile Nav */}
-        {mobileOpen && (
-          <nav className="md:hidden border-t border-primary-foreground/10 pb-3">
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.to}
-                to={link.to}
-                className="flex items-center gap-2 px-6 py-3 text-sm font-medium hover:bg-primary-foreground/10 transition-colors"
-                activeClassName="bg-primary-foreground/15"
-                onClick={() => setMobileOpen(false)}
-              >
-                <link.icon className="h-4 w-4" />
-                {link.label}
-              </NavLink>
-            ))}
-          </nav>
-        )}
+        <AnimatePresence>
+          {mobileOpen && (
+            <motion.nav
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              className="lg:hidden bg-background/98 backdrop-blur-md border-t border-border overflow-hidden"
+            >
+              <div className="px-4 py-4 space-y-1">
+                {navLinks.map((link) => (
+                  <NavLink
+                    key={link.to}
+                    to={link.to}
+                    className="block px-4 py-3 rounded-md text-sm font-medium text-foreground hover:bg-muted transition-colors"
+                    activeClassName="!text-accent bg-muted"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {link.label}
+                  </NavLink>
+                ))}
+              </div>
+            </motion.nav>
+          )}
+        </AnimatePresence>
       </header>
 
       {/* Main */}
       <main className="flex-1">{children}</main>
 
       {/* Footer */}
-      <footer className="bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 py-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <footer className="bg-foreground text-background">
+        <div className="container mx-auto px-4 lg:px-8 py-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             <div>
-              <h3 className="text-lg font-bold mb-3">
-                BAU <span className="text-secondary">GMBH 2</span>
-              </h3>
-              <p className="text-sm text-primary-foreground/70 leading-relaxed">
-                Ihr zuverlässiger Partner für Hochbau und Tiefbau. Qualität und Erfahrung seit Jahren.
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-10 h-10 bg-accent rounded-sm flex items-center justify-center">
+                  <span className="text-accent-foreground font-bold text-lg" style={{ fontFamily: 'Space Grotesk' }}>G</span>
+                </div>
+                <span className="text-xl font-bold" style={{ fontFamily: 'Space Grotesk' }}>
+                  GHBH <span className="text-accent">Bau</span>
+                </span>
+              </div>
+              <p className="text-sm text-background/60 leading-relaxed">
+                Building the future with precision. Your trusted partner for tunnel construction, residential buildings, and infrastructure projects.
               </p>
             </div>
             <div>
-              <h4 className="font-semibold mb-3">Navigation</h4>
-              <ul className="space-y-2 text-sm text-primary-foreground/70">
+              <h4 className="font-semibold mb-4" style={{ fontFamily: 'Space Grotesk' }}>Quick Links</h4>
+              <ul className="space-y-2 text-sm text-background/60">
                 {navLinks.map((link) => (
                   <li key={link.to}>
-                    <NavLink to={link.to} className="hover:text-secondary transition-colors">
+                    <NavLink to={link.to} className="hover:text-accent transition-colors">
                       {link.label}
                     </NavLink>
                   </li>
@@ -97,16 +137,28 @@ const Layout = ({ children }: LayoutProps) => {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-3">Kontakt</h4>
-              <ul className="space-y-2 text-sm text-primary-foreground/70">
-                <li>Musterstraße 123, 80000 München</li>
-                <li>Tel: +49 (0) 89 123 456 78</li>
-                <li>E-Mail: info@baugmbh2.de</li>
+              <h4 className="font-semibold mb-4" style={{ fontFamily: 'Space Grotesk' }}>Services</h4>
+              <ul className="space-y-2 text-sm text-background/60">
+                <li>Tunnel Construction</li>
+                <li>Residential Buildings</li>
+                <li>Infrastructure Projects</li>
+                <li>Concrete & Structural Work</li>
+                <li>Engineering Solutions</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4" style={{ fontFamily: 'Space Grotesk' }}>Contact</h4>
+              <ul className="space-y-2 text-sm text-background/60">
+                <li>Musterstraße 123</li>
+                <li>60000 Frankfurt am Main</li>
+                <li>Tel: +49 (0) 69 123 456 78</li>
+                <li>info@ghbh-bau.de</li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-primary-foreground/10 mt-8 pt-6 text-center text-xs text-primary-foreground/50">
-            © {new Date().getFullYear()} BAU GMBH 2. Alle Rechte vorbehalten.
+          <div className="border-t border-background/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-background/40">
+            <p>© {new Date().getFullYear()} GHBH Bau. All rights reserved.</p>
+            <p className="mt-2 md:mt-0">Built with precision and passion.</p>
           </div>
         </div>
       </footer>
