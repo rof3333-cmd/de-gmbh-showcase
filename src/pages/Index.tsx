@@ -139,14 +139,13 @@ const Index = () => {
             <FadeInSection>
               <div className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">Über BL-Bau GMBH</div>
               <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 sm:mb-6" style={{ fontFamily: 'Space Grotesk' }}>
-                Bauen für die Zukunft,<br />seit 1999
+                Ihr Partner für den Hoch-, Tief- und Umbau!
               </h2>
-              <p className="text-muted-foreground leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
-                BL-Bau GMBH ist ein führendes Bauunternehmen, spezialisiert auf Tunnelbau, Wohnungsbau und große Infrastrukturprojekte. Mit über zwei Jahrzehnten Erfahrung liefern wir Projekte, die die Zeit überdauern.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-6 sm:mb-8 text-sm sm:text-base">
-                Unser Team aus erfahrenen Ingenieuren, Architekten und Baufachleuten bringt Expertise und Innovation in jedes Projekt ein und gewährleistet höchste Qualitäts- und Sicherheitsstandards.
-              </p>
+              <div className="text-muted-foreground leading-relaxed space-y-4 mb-6 sm:mb-8 text-sm sm:text-base">
+                <p>Sie träumen von den eigenen vier Wänden oder suchen einen zuverlässigen Partner für Tiefbauprojekte? Dann sind Sie bei uns genau richtig!</p>
+                <p>Ob Neubau, Umbau, Fundamentarbeiten oder umfangreiche Tiefbauprojekte – wir bringen Ihre Visionen in die Realität.</p>
+                <p>Mit Erfahrung, Präzision und einem starken Team stehen wir Ihnen von der Planung bis zur Umsetzung zur Seite.</p>
+              </div>
               <Button asChild variant="outline" className="rounded-sm border-foreground text-foreground hover:bg-foreground hover:text-background w-full sm:w-auto">
                 <Link to="/ueber-uns">Mehr über uns <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
