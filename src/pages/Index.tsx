@@ -95,30 +95,30 @@ const Index = () => {
       </section>
 
       {/* About preview */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <section className="py-14 sm:py-24 bg-background">
+        <div className="container mx-auto px-5 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <FadeInSection>
               <div className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">About GHBH Bau</div>
-              <h2 className="text-3xl md:text-5xl font-bold mb-6" style={{ fontFamily: 'Space Grotesk' }}>
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 sm:mb-6" style={{ fontFamily: 'Space Grotesk' }}>
                 Engineering Excellence<br />Since 1999
               </h2>
-              <p className="text-muted-foreground leading-relaxed mb-6">
+              <p className="text-muted-foreground leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
                 GHBH Bau is a leading construction company specializing in tunnel construction, residential buildings, and large-scale infrastructure projects. With over two decades of experience, we deliver projects that stand the test of time.
               </p>
-              <p className="text-muted-foreground leading-relaxed mb-8">
+              <p className="text-muted-foreground leading-relaxed mb-6 sm:mb-8 text-sm sm:text-base">
                 Our team of experienced engineers, architects, and construction professionals brings expertise and innovation to every project, ensuring the highest standards of quality and safety.
               </p>
-              <Button asChild variant="outline" className="rounded-sm border-foreground text-foreground hover:bg-foreground hover:text-background">
+              <Button asChild variant="outline" className="rounded-sm border-foreground text-foreground hover:bg-foreground hover:text-background w-full sm:w-auto">
                 <Link to="/about">Learn More About Us <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
             </FadeInSection>
             <FadeInSection delay={0.2}>
               <div className="relative">
                 <img src={building1} alt="Construction project" className="rounded-sm shadow-2xl w-full" />
-                <div className="absolute -bottom-6 -left-6 bg-accent text-accent-foreground p-6 rounded-sm shadow-xl">
-                  <div className="text-3xl font-bold" style={{ fontFamily: 'Space Grotesk' }}>25+</div>
-                  <div className="text-sm">Years of Excellence</div>
+                <div className="absolute -bottom-4 -left-2 sm:-bottom-6 sm:-left-6 bg-accent text-accent-foreground p-4 sm:p-6 rounded-sm shadow-xl">
+                  <div className="text-2xl sm:text-3xl font-bold" style={{ fontFamily: 'Space Grotesk' }}>25+</div>
+                  <div className="text-xs sm:text-sm">Years of Excellence</div>
                 </div>
               </div>
             </FadeInSection>
