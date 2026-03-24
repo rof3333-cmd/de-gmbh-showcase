@@ -62,7 +62,7 @@ const Projects = () => {
               Unsere Projekte
             </h1>
             <p className="text-background/60 max-w-2xl mx-auto text-base sm:text-lg">
-              Entdecken Sie unser Portfolio erfolgreich abgeschlossener Bauprojekte..
+              Entdecken Sie unser Portfolio erfolgreich abgeschlossener Bauprojekte.
             </p>
           </motion.div>
         </div>
